@@ -1,9 +1,17 @@
 {
     "compilerOptions": {
-        "target": "ES5", 
+        "target": "ES2018", 
+        "lib": ["ES5", "ES6", "ES2018"],
         "module": "CommonJS",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
         "allowJs": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "noImplicitAny": false,
         "outDir": "build",
         "rootDir": "src"
-    }
+    },
+    "compileOnSave": true,
+    "include": ["src"]
 }
