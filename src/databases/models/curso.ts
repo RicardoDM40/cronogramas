@@ -2,23 +2,25 @@ import { Entity, PrimaryColumn, Column } from "typeorm"
 import { v4 as uuid } from "uuid"
 
 @Entity("curso")
-export default class Curso{
-    @PrimaryColumn()
-    id_curso: string
+export default class curso {
+  //chave primária
+  @PrimaryColumn()
+  id_curso: string
 
-    @Column({nullable:true})
-    descricao_curso: string
+  //atributos
+  @Column({ nullable: true })
+  descricao_curso: string
 
-    @Column({nullable:true})
-    carga_horaria_curso: number
-    
-    @Column({nullable:true})
-    modalidade: string
+  @Column({ nullable: true })
+  carga_horaria_curso: number
 
-    @Column({nullable:true})
-    eixo: string
+  @Column({ nullable: true })
+  modalidade: string
 
-    constructor(){
-        this.id_curso = uuid()
-    }
+  @Column()
+  eixo: string
+
+  constructor() {
+    this.id_curso = uuid()
+  }
 }
